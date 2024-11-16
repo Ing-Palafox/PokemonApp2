@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Barra de navegación (Toolbar) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:title="Pokémon App"
+        android:titleTextColor="#FFFFFF"
+        android:elevation="4dp"
+        android:layout_marginTop="0dp" /> <!-- Asegúrate de que no tenga márgenes, para que esté en el borde superior -->
+
+    <!-- Campo para ingresar el nombre del Pokémon -->
+    <EditText
+        android:id="@+id/pokemon_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Introduce el nombre del Pokémon"
+        android:inputType="text" />
+
+    <!-- Botón para buscar el Pokémon -->
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar Pokémon" />
+
+    <!-- Nombre del Pokémon -->
+    <TextView
+        android:id="@+id/pokemon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Nombre del Pokémon"
+        android:textSize="20sp" />
+
+    <!-- Imagen del Pokémon -->
+    <ImageView
+        android:id="@+id/pokemon_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <!-- RecyclerView para mostrar la lista de Pokémon -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pokemon_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1" /> <!-- Utilizamos weight para que ocupe el espacio restante -->
+
+</LinearLayout>
